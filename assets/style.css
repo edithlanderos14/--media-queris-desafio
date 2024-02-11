@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+    
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 60px 1fr 60px;
+    grid-template-areas:
+    
+    "navbar"
+    "filter"
+    "productos"
+    "footer"
+    ;
+   
+}
+
+
+.logo, .menu{
+    width: 30px;
+
+}
+
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: azure;
+    align-items: center;
+    grid-area: navbar;
+
+
+
+}
+
+
+.section >ul{
+    display: none;
+}
+.logo_container{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+.filter{
+    background-color: rgb(169, 169, 163);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-area: filter;
+}
+
+
+.cuaderno{
+    width: 200px
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    width: 200px;
+    padding: 35px 0px;
+    gap: 15px;
+    border-radius: 3px;
+}
+
+.container_cuadernillo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+
+
+}
+
+footer{
+    background-color: lightskyblue;
+    color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: footer;
+}
+
+footer div >img{
+    width: 22px;
+}
+
+.botones{
+    display: flex;
+
+}
+ 
+.botones >button{
+    width: 30px;
+    height: 30px;
+    color:coral;
+
+}
+
+.main_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: productos;
+
+}
+
+@media(min-width: 576px){
+    .container{
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 60px 1fr 60px ;
+        grid-template-areas: 
+        
+        "navbar filter"
+        "navbar productos"
+        "footer productos"
+        ;
+
+    }
+    .container_cuadernillo{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section{
+        flex-direction: column;
+        justify-content: start;
+
+        
+
+    }
+    .menu{
+        display: none;
+    }
+    .section >ul{
+        display: block;
+    }
+
+}
+   
+
+        
+        
+    
+     
